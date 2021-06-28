@@ -1,0 +1,33 @@
+
+choices is a dict
+
+<ul>
+{% for key, value in choices.items %} 
+  <li>{{key}} - {{value}}</li>
+{% endfor %}
+</ul>
+
+
+Good to keep html and js in python based template rather than real files
+
+Jquery,to simplify HTML DOM Manipulation, Event Handling, Animations, and Ajax.
+We can create custom xmlhttp like object
+Jquery ...shd be at top
+
+{% if sets.has_previous %}
+      <a href=" ?page={{ sets.previous_page_number }}&flg=1&q={{query}}"> Previous Page </a> 
+      {% endif%}
+
+      {% if sets.has_next %} 
+      <a href=" ?page={{ sets.next_page_number }}&flg=1&q={{query}}"> Next Page </a>
+      {% endif %}
+
+
+
+CLICK PAGINATION SHD COME FROM AJAX ELSE IT WILL RELOAD
+
+VALUES IN QUERY ID NOT UPDATING AUTO WHEN NEW VALUE CAME.
+
+https://stackoverflow.com/questions/42843001/bootstrap-table-wenzhixin-data-by-ajax#    BOOTSTRAP - TABLE
+
+https://stackoverflow.com/questions/17104265/caching-a-jquery-ajax-response-in-javascript-browser    CACHING IN CLIENT SIDE
