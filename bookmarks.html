@@ -1,0 +1,130 @@
+{%  extends 'main.html' %}
+
+
+
+{% block content %} 
+
+<h3>Bank Details</h3>
+
+
+<div class="dropdown-menu-right"  data-query-params="queryParams">
+
+  <label for="choices"> select city</label>
+    <select id="choice" name="choice" class="form-select" aria-label="Default select example" >
+      <option value="none"> select an option</option>
+      <option value="Hyderabad">Hyderabad</option>
+      <option value="Delhi">Delhi</option>
+      <option value="Chennai">Chennai</option>
+      <option value="Bangalore">Bangalore</option>
+    </select>
+
+</div>
+
+  
+
+  <table   id="table"
+            data-toggle="table"
+           data-height="460"
+           data-search="true"
+           data-ajax="ajaxRequest"
+           data-pagination="true"
+           class="table table-striped"
+           data-search-align="left"
+           data-query-params="queryParams"
+        >
+        <thead>
+          <tr>
+            <th data-field="ifsc"> ifsc </th>
+              
+              <th data-field="bank_id" > bank_id </th>
+              <th data-field="branch"> branch </th>
+
+              <th data-field="bank_name" > bank_name </th>
+              <th data-field="address"> address </th>
+             
+             
+
+             <th data-field="city"> city </th>
+             <th data-field="district"> district </th>
+             
+             <th data-field="state"> state </th>
+             
+          </tr>
+        </thead>
+
+  </table>
+
+
+
+
+
+
+
+{% endblock %}
+
+
+
+{% block js %}
+
+
+
+
+
+<script type="text/javascript">
+
+
+selected_choice=$('#choice');
+
+
+
+
+
+
+
+
+
+
+
+  
+ function ajaxRequest(params) {
+    console.log(params)
+    
+
+    $.ajax({
+        type: "GET",
+        url: "/get_records/",
+// You are expected to receive the generated JSON (json_encode($data))
+        dataType: "json",
+
+        success: function (data) {
+            data=data['html_from_view']
+            table.bootstrapTable({data: data})
+            
+}
+
+
+/*
+params.success({
+// By default, Bootstrap table wants a "rows" property with the data
+                "rows": data,
+// You must provide the total item ; here let's say it is for array length
+                "total": data.length
+            })
+        },
+        error: function (er) {
+            params.error(er);
+        }
+
+*/
+});
+
+}
+
+</script>
+
+
+  
+
+
+
+{% endblock %}

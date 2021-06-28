@@ -1,0 +1,110 @@
+{% load static %}
+
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<title>  TESTING 
+
+
+
+	 </title>
+
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://unpkg.com/bootstrap-table@1.18.3/dist/bootstrap-table.min.css">
+
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.25/css/jquery.dataTables.min.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    
+   
+	
+</head>
+<body>	
+
+	{% block content %}
+
+
+	{% endblock %}
+
+	<!--
+		"columns": [
+            { "data": "ifsc" },
+            { "data": "bank_id" },
+            { "data": "branch" },
+            { "data": "bank_name" },
+            { "data": "address" },
+            { "data": "city" },
+            { "data": "district" },
+            { "data": "state" }
+        ]
+        
+		<link rel="stylesheet" type="text/css" href="{% static 'css/main.css' %}"/>
+
+		
+	<label for="choices"> select city</label>
+		<select id="choice" name="choices" onchange= "searchList()" >
+			<option value="none"> select an option</option>
+		  <option value="Hyderabad">Hyderabad</option>
+		  <option value="Delhi">Delhi</option>
+		  <option value="Chennai">Chennai</option>
+		  <option value="Bangalore">Bangalore</option>
+		</select>
+
+		<table width="100%">
+		    <tr  class="bg-info">
+		         <td> ifsc </td>
+		         <td> bank_id </td>
+		         <td> branch </td>
+		         <td> address </td>
+		         <td> city </td>
+		         <td> district </td>
+		         <td> state </td>
+		         <td> bank_name </td>
+		    </tr>
+
+		    <tbody id="myTable">
+	        
+	    	</tbody>
+		</table>
+
+
+
+
+	<h1>Search..</h1>  
+<form name="vinform">  
+<input type="text" name="name" onkeyup="searchTable()">  
+</form>  
+
+<div id='tablelocation'> 
+
+ </div>  -->
+
+	
+
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.25/css/jquery.dataTables.css">
+  
+	<script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.25/js/jquery.dataTables.js"></script>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery/dist/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/bootstrap-table@1.18.3/dist/bootstrap-table.min.js"></script>
+
+    {% block js %}
+
+    {% endblock %}
+
+</body>
+
+
+	
+
+	
+</html>
